@@ -63,4 +63,58 @@ float num_3 = Float.parseFloat(n_3);
 
 Para utilizar esse método não é necessário criar um objeto `Integer` pois são `static`. O parâmetro do método é uma `String`, e se ela não for válida é lançado a exceção `NumberFormatException`.
 
+## Classe Math
+
+A classe Math contém métodos utilitários `static` para trabalhar com números vamos demonstrar alguns deles abaixo.
+Essa classe já está na package (pacote) java.lang não sendo necessária sua importação.
+
+Retornando o maior elemento:
+```java
+int n1 = 10;
+int n2 = 20;
+int resultado = Math.max(n1, n2);
+System.out.println(resultado); 
+// Retorno esperado: 20
+```
+Retornando o menor elemento:
+```java
+int n1 = 10;
+int n2 = 20;
+int resultado = Math.min(n1, n2);
+System.out.println(resultado); 
+// Retorno esperado: 10
+```
+Retornando o valor Absoluto do elemento:
+```java
+int n1 = -5;
+int resultado = Math.abs(n1);
+System.out.println(resultado); 
+// Retorno esperado: 5
+```
+Os métodos estáticos acima `max()`, `min()` e `abs()` também funcionam com os tipos `int`, 
+`double` e `float` faça o teste você mesmo!
+
+Retornando a raiz quadrada de um número não negativo `double`:
+```java
+double n1 = 25.0;
+double resultado = Math.sqrt(n1);
+System.out.println(resultado);
+// Retorno esperado: 5.0
+```
+A operação de potenciação com expoente natural pode ser interpretada como uma multiplicação com fatores iguais.
+```java
+double base = 2;
+double expoente = 3;
+double resultado = Math.pow(base, expoente);
+System.out.println(resultado);
+// Retorno esperado: 8
+```
+Gerando números aleatórios:
+```java
+double n1 = Math.random();
+System.out.println(n1);
+// Retorno esperado: Numero aleatório em um intervalo >= 0.0 e <1.0 
+// Ex.: 0.8887522637035233
+```
+
 [Próximo](./02-LeituraDeArquivo.md) - Leitura de arquivo
